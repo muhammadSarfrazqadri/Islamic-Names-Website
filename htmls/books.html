@@ -5,218 +5,342 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Islam4Everyone - Free Islamic Books Download | Naats, Hadees, Islamic Names and more. Download authentic Islamic books from Dawat-e-Islami official sources.">
+    content="Islam4Everyone - Download authentic Islamic books including Naats, Hadees, Islamic Names and more from official Dawat-e-Islami sources.">
   <meta name="keywords"
-    content="Islamic books, free download Islamic books, naat books, hadees books, Islamic names, Dawat-e-Islami books, Islam4Everyone library">
+    content="Islamic books, download Islamic books, Naats, Hadees, Islamic Names, Dawat-e-Islami, Islam4Everyone">
+  <meta property="og:title" content="Islam4Everyone - Islamic Books Library">
+  <meta property="og:description"
+    content="Read & Download authentic Islamic books: Naats, Hadees, Islamic Names, and more.">
+  <meta property="og:image" content="../assets/Website-logo-eng.webp">
+  <meta property="og:url" content="https://muhammadsarfrazqadri.github.io/Islam4everyone/htmls/books.html">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Islam4Everyone - Islamic Books</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/navBar.css">
-</head>
-<style>
-  .header {
-    background: #0a4f32;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
+  <style>
+    .header {
+      background: #0a4f32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-  .header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-  }
+    .header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
 
-  .header p {
-    margin-top: 5px;
-    font-size: 1rem;
-    margin-bottom: 1em;
-  }
+    .header p {
+      margin-top: 5px;
+      font-size: 1rem;
+      margin-bottom: 1em;
+    }
 
-  .category {
-    padding: 20px;
-  }
+    .search-box input {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      width: 250px;
+      max-width: 90%;
+    }
 
-  .category h2 {
-    border-left: 5px solid #0a4f32;
-    padding-left: 10px;
-    color: #0a4f32;
-  }
+    .category {
+      padding: 20px;
+    }
 
-  .book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-  }
+    .category h2 {
+      border-left: 5px solid #0a4f32;
+      padding-left: 10px;
+      color: #0a4f32;
+    }
 
-  .book-card {
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s;
-  }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
 
-  .book-card:hover {
-    transform: translateY(-4px);
-  }
+    .book-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
 
-  .book-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-  }
+    .book-card:hover {
+      transform: translateY(-4px);
+    }
 
-  .book-info {
-    padding: 10px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+    .book-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
 
-  .book-info h3 {
-    font-size: 1rem;
-    margin: 0 0 5px 0;
-  }
+    .book-info {
+      padding: 10px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-  .book-info p {
-    font-size: 0.85rem;
-    color: #555;
-    flex-grow: 1;
-  }
+    .book-info h3 {
+      font-size: 1rem;
+      margin: 0 0 5px 0;
+    }
 
-  .download-btn {
-    display: inline-block;
-    text-align: center;
-    background: linear-gradient(180deg, #0b5f3b 0%, #0a4f32 100%);
-    color: white;
-    padding: 8px 12px;
-    margin-top: 10px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+    .book-info p {
+      font-size: 0.85rem;
+      color: #555;
+      flex-grow: 1;
+    }
 
-  .see-all {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 14px;
-    border-radius: 6px;
-    background: #eee;
-    text-decoration: none;
-    font-size: 0.85rem;
-    color: #0a4f32;
-    border: 1px solid #ccc;
-  }
-</style>
+    .download-btn {
+      display: inline-block;
+      text-align: center;
+      background: linear-gradient(180deg, #0b5f3b 0%, #0a4f32 100%);
+      color: white;
+      padding: 8px 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    figcaption {
+      font-size: 0.75rem;
+      color: #777;
+      padding: 5px 10px;
+      text-align: center;
+    }
+
+    .see-all {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #eee;
+      text-decoration: none;
+      font-size: 0.85rem;
+      color: #0a4f32;
+      border: 1px solid #ccc;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <nav class="navbar">
       <div class="nav-inner-div">
-
-        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="islamicNamesLogo"></a>
+        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="Islam4Everyone Logo"></a>
         <ul class="nav-links" id="navLinksDesktop">
-          <li><a href="../index.html"><i class="fas fa-home" style="color:#ffeb3b;"></i>Home</a></li>
-          <li><a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i>Names</a></li>
-          <li><a href="../htmls/books.html"><i class="fas fa-book" style="color:#78f77e;"></i>Books</a></li>
-          <li><a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i>About</a></li>
-          <li><a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a></li>
-          <!-- <li><a href="#"><i class="fas fa-search" style="color:#ff5722;"></i>Search With Alphabets</a></li> -->
+          <li><a href="../index.html"><i class="fas fa-home" style="color:#ffeb3b;"></i> Home</a></li>
+          <li><a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i> Names</a></li>
+          <li><a href="../htmls/books.html" class="active"><i class="fas fa-book" style="color:#78f77e;"></i> Books</a>
+          </li>
+          <li><a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i> About</a></li>
+          <li><a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i> Contact Us</a></li>
         </ul>
-        <!-- <div class="toggles desktop-toggles">
-          <button id="toggleLang" class="toggle-btn" title="Toggle Language">
-          <i id="langIcon" class="fa-solid fa-language"></i>
-        </button>
-        <button id="toggleTheme" class="toggle-btn" title="Toggle Dark Mode">
-          <i id="themeIcon" class="fa-solid fa-moon"></i>
-        </button> -->
-        <!-- ------------------------------------------------------------------------------------------- -->
         <button class="hamburger" id="navToggle" aria-label="Menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
-        <nav class="mobile-nav-dropdown" id="mobileNavDropdown">
-          <ul class="nav-links" id="navLinksMobile">
-            <li><a href="../index.html"><i class="fas fa-home" style="color:#ffeb3b;"></i>Home</a></li>
-            <li><a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i>Names</a></li>
-            <li><a href="../htmls/books.html"><i class="fas fa-book" style="color:#78f77e;"></i>Books</a></li>
-            <li><a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i>About</a></li>
-            <li><a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a>
-            </li>
-            <!-- <li><a href="#"><i class="fas fa-search" style="color:#ff5722;"></i>Search With Alphabets</a></li> -->
-          </ul>
-        </nav>
       </div>
     </nav>
   </header>
 
-  <!-- /* /////////////////////////////// ------ NAV BAR COMPLETED ------ //////////////////////////// */ -->
-
-  <div class="header">
-    <h1>Islam4Everyone - Islamic Books Library</h1>
-    <p>Read & Download authentic Islamic books: Naats, Hadees, Islamic Names, and more</p>
-    <div class="search-box">
-      <input type="text"  class="input" id="searchInput" placeholder="Search books...">
-    </div>
-  </div>
-
-
-  <!-- Category 1: Naats -->
-  <section class="category">
-    <h2>Naats & Hamd Books</h2>
-    <div class="book-grid">
-      <div class="book-card">
-        <img src="naat1.jpg" alt="Naat book 1">
-        <div class="book-info">
-          <h3>Naat Collection Vol 1</h3>
-          <p>A beautiful collection of Naats in Urdu and Arabic.</p>
-          <a href="https://example.com/naat1.pdf" target="_blank" class="download-btn">Download from Dawat-e-Islami</a>
-        </div>
-      </div>
-      <!-- Repeat more book-cards -->
-    </div>
-    <a href="naats.html" class="see-all">See All</a>
-  </section>
-
-  <!-- Category 2: Islamic Names -->
-  <section class="category">
-    <h2>Islamic Names Books</h2>
-    <div class="book-grid">
-      <div class="book-card">
-        <img src="names1.jpg" alt="Islamic Names Book">
-        <div class="book-info">
-          <h3>Beautiful Islamic Names</h3>
-          <p>List of Islamic boy and girl names with meanings.</p>
-          <a href="https://example.com/names.pdf" target="_blank" class="download-btn">Download from Dawat-e-Islami</a>
-        </div>
+  <!-- Main Content -->
+  <main>
+    <div class="header">
+      <h1>Islamic Books Library</h1>
+      <p>Read & Download authentic Islamic books: Naats, Hadees, Islamic Names, and more.</p>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search books..." aria-label="Search books">
       </div>
     </div>
-    <a href="names.html" class="see-all">See All</a>
-  </section>
 
-  <!-- Category 3: Hadees -->
-  <section class="category">
-    <h2>Hadees & Sunnah Books</h2>
-    <div class="book-grid">
-      <div class="book-card">
-        <img src="hadees1.jpg" alt="Hadees Book">
-        <div class="book-info">
-          <h3>Riyad-us-Saliheen</h3>
-          <p>Authentic Hadees collection with explanations.</p>
-          <a href="https://example.com/hadees.pdf" target="_blank" class="download-btn">Download from Dawat-e-Islami</a>
+    <!-- Categories -->
+    <section class="category">
+      <h2>Naats & Hamd Books</h2>
+      <div class="book-grid">
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/hadaiq-bakhshish-768x512.png" alt="Hadaiq e Bakhshish - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Hadaiq e Bakhshish - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Hadaiq e Bakhshish |<span class="author"> Ala Hazrat Imam Ahmed Raza Khan</span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2003/290-1.pdf?fn=hadaiq-e-bakhshish" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+      
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/bayaz-paak-768x512.webp" alt="Bayaz e Paak - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Bayaz e Paak - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Bayaz e Paak</h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://example.com/bayaz-paak.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/manaqib-attar-768x512.webp" alt="Manaqib-e-Attar - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Manaqib-e-Attar - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Manaqib-e-Attar</h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://example.com/manaqib-attar.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/qabale-bakhshish-768x512.webp" alt="Qabale Bakhshish - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Qabale Bakhshish - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Qabale Bakhshish</h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://example.com/qabale-bakhshish.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/saman-bakhish.webp" alt="Saman e Bakhish - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Saman e Bakhish - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Saman e Bakhish</h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://example.com/saman-bakhish.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/wasail-bakhshish-768x512.webp" alt="Wasail e Bakhshish - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Wasail e Bakhshish - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Wasail e Bakhshish</h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2010/519-1.pdf?fn=wasail-e-bakhshish" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/zoqe-naat-768x512.webp" alt="Zoqe Naat - Naat Book"
+              loading="lazy" width="800" height="500">
+            <figcaption>Zoqe Naat - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Zoqe Naat</h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://example.com/zoqe-naat.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+
+      </div>
+      <!-- <a href="naats.html" class="see-all">See All</a> -->
+    </section>
+
+    <section class="category">
+      <h2>Islamic Names Books</h2>
+      <div class="book-grid">
+        <article class="book-card">
+          <figure>
+            <img src="names1.jpg" alt="Islamic Names Book" loading="lazy">
+          </figure>
+          <div class="book-info">
+            <h3>Beautiful Islamic Names</h3>
+            <p>List of Islamic boy and girl names with meanings.</p>
+            <a href="https://example.com/names.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+      </div>
+      <!-- <a href="names.html" class="see-all">See All</a> -->
+    </section>
+
+    <section class="category">
+      <h2>Hadees & Sunnah Books</h2>
+      <div class="book-grid">
+        <article class="book-card">
+          <figure>
+            <img src="hadees1.jpg" alt="Riyad-us-Saliheen Book" loading="lazy">
+          </figure>
+          <div class="book-info">
+            <h3>Riyad-us-Saliheen</h3>
+            <p>Authentic Hadees collection with explanations.</p>
+            <a href="https://example.com/hadees.pdf" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+      </div>
+      <!-- <a href="hadees.html" class="see-all">See All</a> -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="Islam4Everyone Logo"></a>
+        <h2>Islam4everyone<span>™</span></h2>
+      </div>
+      <div class="footer-column">
+        <h3>Services</h3>
+        <div class="footer-links">
+          <a href="../htmls/allnames.html">Islamic Names</a>
+          <a href="../htmls/books.html">Islamic Books</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Social</h3>
+        <div class="footer-links">
+          <a target="_blank" href="https://www.linkedin.com/in/muhammad-sarfraz-web-developer"><i
+              class="fab fa-linkedin"></i> LinkedIn</a>
+          <a target="_blank" href="https://wa.me/+3198370838"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a target="_blank" href="https://www.facebook.com/share/18s2dLkLie/"><i class="fab fa-facebook-f"></i>
+            Facebook</a>
+          <a target="_blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i> YouTube</a>
         </div>
       </div>
     </div>
-    <a href="hadees.html" class="see-all">See All</a>
-  </section>
+    <div class="footer-bottom">
+      &copy; 2025 Islam4Everyone Website. All rights reserved.
+    </div>
+  </footer>
 
   <script>
     document.getElementById('searchInput').addEventListener('input', function () {
@@ -225,73 +349,10 @@
       books.forEach(book => {
         const title = book.querySelector('h3').innerText.toLowerCase();
         const desc = book.querySelector('p').innerText.toLowerCase();
-        if (title.includes(filter) || desc.includes(filter)) {
-          book.style.display = '';
-        } else {
-          book.style.display = 'none';
-        }
+        book.style.display = title.includes(filter) || desc.includes(filter) ? '' : 'none';
       });
     });
   </script>
-
-  <!-- ============================= FOOTER SECTION ============================ -->
-
-  <!-- ============================= FOOTER SECTION ============================ -->
-
-  <footer id="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="islamicNamesLogo"></a>
-        <h2>Islam4everyone<span>™</span></h2>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Services</h3>
-        <div class="footer-links">
-          <a href="../htmls/allnames.html">Islamic Names</a>
-          <a href="../htmls/books.html">Islamic Books</a>
-          <a href="#">Age Calculator (coming soon)</a>
-          <a href="#">Written Naats (coming soon)</a>
-          <a href="#">Audio & Video Naats (coming soon)</a>
-        </div>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Social</h3>
-        <div class="footer-links">
-          <a target="_blank" href="https://www.linkedin.com/in/muhammad-sarfraz-web-developer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a target="_blank" href="https://wa.me/+3198370838"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a target="_blank" href="https://www.facebook.com/share/18s2dLkLie/"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a target="_blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i> Youtube</a>
-        </div>
-      </div>
-      
-      <div class="footer-column">
-        <h3>Quick links</h3>
-        <div class="footer-links">
-          <a href="../index.html"><i class="fas fa-home" style="color:#ffeb3b;"></i>Home</a>
-          <a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i>Names</a>
-          <a href="../htmls/books.html"><i class="fas fa-book" style="color:#78f77e;"></i>Books</a>
-          <a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i>About</a>
-          <a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a>
-        </div>
-        
-        <!-- <h3>Address</h3>
-        <p>Karachi, Pakistan</p>
-        <p><strong>Mobile</strong><a href="tel:+923198370838">+92 319 8370838</a></p>
-        <p><strong>Email</strong><a href="mailto:info@islam4everyone.com">info@islam4everyone.com</a></p> -->
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      &copy;  2025 Islamic Names Website. All rights reserved.
-    </div>
-  </footer>
-
-  <script src="../app.js/index.js"></script>
-  <script src="../app.js/hamburger.js"></script>
-  <script src="../app.js/toggle.js"></script>
-  <script src="../app.js/footer.js"></script>
 </body>
 
 </html>

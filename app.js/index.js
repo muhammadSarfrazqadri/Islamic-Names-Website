@@ -22,13 +22,36 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+const resultsContainer = document.getElementById("resultsContainer");
+const alphabetContainer = document.getElementById("alphabetContainer");
+const resultUpperContainer = document.getElementById("resultUpperContainer");
+
 // ✅ 2. FETCH NAMES FOR MAIN SECTION (cards)
 async function fetchNames() {
   try {
-    const names = await getDocs(collection(db, "names"));
     const card = document.getElementById("namesSection");
-    card.innerHTML = "";
+    // const loader = document.getElementsById("loading-spinner");
+    const resultsSection = document.getElementById("resultsContainer"); 
+    const resultUpper = document.getElementById("resultUpperContainer");
 
+    if (!card || !loader || !resultsSection || !resultUpper) {
+      console.error("Required elements not found");
+      return;
+    }
+
+    resultsSection.style.display = "none";
+    alphabetContainer.style.display = "none";
+
+    // Fetch data
+    const names = await getDocs(collection(db, "names"));
+
+    // End: hide loader, show results, set large height
+    // loader.style.display = "none";
+    document.getElementsByClassName("loader")[0].style.display = "none";
+    resultsSection.style.display = "block";
+    alphabetContainer.style.display = "block";
+
+    // Render cards
     names.forEach((name) => {
       const { name_en, name_ur, meaning_en, meaning_ur } = name.data();
 
@@ -47,8 +70,8 @@ async function fetchNames() {
         </div>`;
     });
   } catch (error) {
-    // console.error("Error fetching names:", error);
-  }
+    console.error("Error fetching names:", error);
+}
 }
 fetchNames();
 
@@ -117,14 +140,14 @@ if (namesCard && allNamesSearchInput) {
   allNamesSearchInput.addEventListener("keyup", function () {
     const searchValue = this.value.toLowerCase();
     namesCard.innerHTML = "";
-
+    
     if (searchValue) {
       const filtered = namesArray.filter((item) =>
         item.name_en.includes(searchValue) || item.name_ur.includes(searchValue)
-      );
-
-      if (filtered.length === 0) {
-        namesCard.innerHTML = `<h2><p class="name-card">No names found for "<strong>${searchValue}</strong>".</p></h2>`;
+    );
+    
+    if (filtered.length === 0) {
+      namesCard.innerHTML = `<h2><p class="name-card">No names found for "<strong>${searchValue}</strong>".</p></h2>`;
         return;
       }
 
@@ -132,17 +155,17 @@ if (namesCard && allNamesSearchInput) {
         const card = document.createElement("div");
         card.className = "name-card";
         card.innerHTML = `
-          <h2 class="name">${item.name_en}</h2> |
-          <span class="ur_content" dir="rtl">
-            <h2 class="name">${item.name_ur}</h2>
-          </span>
-          <a class="details-btn" id="${item.id}" href="/htmls/nameDetails.html?id=${item.id}">More Details</a>
+        <h2 class="name">${item.name_en}</h2> |
+        <span class="ur_content" dir="rtl">
+        <h2 class="name">${item.name_ur}</h2>
+        </span>
+        <a class="details-btn" id="${item.id}" href="/htmls/nameDetails.html?id=${item.id}">More Details</a>
         `;
         namesCard.appendChild(card);
       });
-
+      
     } else {
-      // Agar input empty ho to full list wapas show karo
+      document.getElementById('alphabetContainer').style.display = 'none'
       fetchAllNames();
     }
   });
@@ -192,8 +215,6 @@ detailsBtn.forEach(btn => {
 // ✅ 7. ALPHABET FILTERING
 
 
-const alphabetContainer = document.getElementById("alphabetContainer");
-const resultsContainer = document.getElementById("resultsContainer");
 
 const allBtn = document.createElement("button");
 allBtn.textContent = "All";

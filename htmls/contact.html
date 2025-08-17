@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Islamic Names</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <meta name="description"
-    content="Contact us for any inquiries or assistance regarding Islamic names, meanings, and resources. We are here to help you find the perfect name.">
-  <meta name="keywords"
-    content="contact, Islamic names, boys names, girls names, baby names, meanings, assistance, inquiries, resources">
+  <title>Contact Us - Islamic Names & Meanings | Islam4Everyone</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Contact Islam4Everyone for help with Islamic names, meanings, and resources. Get assistance via email, WhatsApp, or online form.">
+  <meta name="keywords" content="contact, Islamic names, boys names, girls names, baby names, meanings, assistance, inquiries, resources">
   <meta name="author" content="Islam4everyone.com">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Contact Us - Islam4Everyone" />
+  <meta property="og:description" content="Get in touch for Islamic names, meanings, and resources. We’re here to help." />
+  <meta property="og:image" content="../asserts/Website-logo-eng.webp" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muhammadsarfrazqadri.github.io/Islam4everyone/htmls/contact.html" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/navBar.css">
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,7 +31,6 @@
       margin: 0;
       padding: 0;
     }
-
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -32,25 +40,18 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: justify;
     }
-
-    h1,
-    h2 {
+    h1, h2 {
       color: #009688;
     }
-
     h1 {
       border-bottom: 2px solid #00796b;
       padding-bottom: 10px;
     }
-
-    input:hover,
-    textarea:hover {
+    input:hover, textarea:hover {
       background-color: gainsboro;
       border: 1px solid #009688;
     }
-
-    input:focus,
-    textarea:focus {
+    input:focus, textarea:focus {
       outline: none;
       background-color: rgb(233, 232, 232);
       border-bottom: 3px solid #009688;
@@ -59,86 +60,65 @@
 </head>
 
 <body>
+  <!-- HEADER -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Menu">
       <div class="nav-inner-div">
-
-        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="islamicNamesLogo"></a>
+        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="Islam4Everyone Website Logo" loading="lazy"></a>
         <ul class="nav-links" id="navLinksDesktop">
           <li><a href="../index.html"><i class="fas fa-home" style="color:#ffeb3b;"></i>Home</a></li>
           <li><a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i>Names</a></li>
           <li><a href="../htmls/books.html"><i class="fas fa-book" style="color:#78f77e;"></i>Books</a></li>
           <li><a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i>About</a></li>
-          <li><a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a></li>
-          <!-- <li><a href="#"><i class="fas fa-search" style="color:#ff5722;"></i>Search With Alphabets</a></li> -->
+          <li><a href="../htmls/contact.html" aria-current="page"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a></li>
         </ul>
-        <!-- <div class="toggles desktop-toggles">
-        <button id="toggleLang" class="toggle-btn" title="Toggle Language">
-          <i id="langIcon" class="fa-solid fa-language"></i>
+        <button class="hamburger" id="navToggle" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
         </button>
-        <button id="toggleTheme" class="toggle-btn" title="Toggle Dark Mode">
-          <i id="themeIcon" class="fa-solid fa-moon"></i>
-        </button> -->
-        <!-- ------------------------------------------------------------------------------------------- -->
-        <button class="hamburger" id="navToggle" aria-label="Menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <nav class="mobile-nav-dropdown" id="mobileNavDropdown">
+        <nav class="mobile-nav-dropdown" id="mobileNavDropdown" aria-label="Mobile Menu">
           <ul class="nav-links" id="navLinksMobile">
             <li><a href="../index.html"><i class="fas fa-home" style="color:#ffeb3b;"></i>Home</a></li>
             <li><a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i>Names</a></li>
             <li><a href="../htmls/books.html"><i class="fas fa-book" style="color:#78f77e;"></i>Books</a></li>
             <li><a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i>About</a></li>
-            <li><a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a>
-            </li>
-            <!-- <li><a href="#"><i class="fas fa-search" style="color:#ff5722;"></i>Search With Alphabets</a></li> -->
+            <li><a href="../htmls/contact.html" aria-current="page"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a></li>
           </ul>
         </nav>
       </div>
     </nav>
-
-    <!-- /* /////////////////////////////// ------ NAV BAR COMPLETED ------ //////////////////////////// */ -->
-
   </header>
 
+  <!-- MAIN -->
   <main class="contact-section">
     <h1 class="contact-title">Contact Us</h1>
-    <p>
-      If you're having trouble finding a name, have a question, or would like to contribute, please feel free to contact
-      us using the details below.
-    </p>
+    <p>If you're having trouble finding a name, have a question, or would like to contribute, please feel free to contact us using the details below.</p>
 
     <div class="contact-info">
-      <p><strong>Email:</strong> <a href="mailto:info@islam4everyone.com">info@islam4everyone.com</a></p>
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/923198370838" target="_blank">+92 319 8370838</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@islam4everyone.com" title="Send us an email">info@islam4everyone.com</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/923198370838" target="_blank" rel="noopener" title="Chat on WhatsApp">+92 319 8370838</a></p>
       <p><strong>Address:</strong> Karachi, Pakistan</p>
     </div>
 
     <h2>Online Form</h2>
-    <form action="#" method="post" class="contact-form">
+    <form action="#" method="post" class="contact-form" aria-label="Contact Form">
       <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" required aria-required="true">
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" required aria-required="true">
 
       <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" aria-label="Send your message">Send Message</button>
     </form>
   </main>
 
-  <!-- ============================= FOOTER SECTION ============================ -->
-
-  <!-- ============================= FOOTER SECTION ============================ -->
-
+  <!-- FOOTER -->
   <footer id="footer">
     <div class="footer-container">
       <div class="footer-logo">
-        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="islamicNamesLogo"></a>
+        <a href="../index.html"><img class="logo" src="../asserts/Website-logo-eng.webp" alt="Islam4Everyone Website Logo" loading="lazy"></a>
         <h2>Islam4everyone<span>™</span></h2>
       </div>
       
@@ -156,10 +136,10 @@
       <div class="footer-column">
         <h3>Social</h3>
         <div class="footer-links">
-          <a target="_blank" href="https://www.linkedin.com/in/muhammad-sarfraz-web-developer?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a target="_blank" href="https://wa.me/+3198370838"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a target="_blank" href="https://www.facebook.com/share/18s2dLkLie/"><i class="fab fa-facebook-f"></i> Facebook</a>
-          <a target="_blank" href="https://www.youtube.com"><i class="fab fa-youtube"></i> Youtube</a>
+          <a target="_blank" href="https://www.linkedin.com/in/muhammad-sarfraz-web-developer" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a target="_blank" href="https://wa.me/+3198370838" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a target="_blank" href="https://www.facebook.com/share/18s2dLkLie/" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a target="_blank" href="https://www.youtube.com" rel="noopener"><i class="fab fa-youtube"></i> Youtube</a>
         </div>
       </div>
       
@@ -170,25 +150,19 @@
           <a href="../htmls/allnames.html"><i class="fas fa-list" style="color:#ffc107;"></i>Names</a>
           <a href="../htmls/books.html"><i class="fas fa-book" style="color:#78f77e;"></i>Books</a>
           <a href="../htmls/about.html"><i class="fas fa-info-circle" style="color:#c5f3e9;"></i>About</a>
-          <a href="../htmls/contact.html"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a>
+          <a href="../htmls/contact.html" aria-current="page"><i class="fas fa-envelope" style="color:#ffffff;"></i>Contact Us</a>
         </div>
-        
-        <!-- <h3>Address</h3>
-        <p>Karachi, Pakistan</p>
-        <p><strong>Mobile</strong><a href="tel:+923198370838">+92 319 8370838</a></p>
-        <p><strong>Email</strong><a href="mailto:info@islam4everyone.com">info@islam4everyone.com</a></p> -->
       </div>
     </div>
-    
     <div class="footer-bottom">
-      &copy;  2025 Islamic Names Website. All rights reserved.
+      &copy; 2025 Islam4Everyone Website. All rights reserved.
     </div>
   </footer>
 
-  <script src="../app.js/index.js"></script>
-  <script src="../app.js/toggle.js"></script>
-  <script src="../app.js/footer.js"></script>
-  <script src="../app.js/hamburger.js"></script>
+  <!-- JS -->
+  <script src="../app.js/index.js" defer></script>
+  <script src="../app.js/toggle.js" defer></script>
+  <script src="../app.js/footer.js" defer></script>
+  <script src="../app.js/hamburger.js" defer></script>
 </body>
-
 </html>

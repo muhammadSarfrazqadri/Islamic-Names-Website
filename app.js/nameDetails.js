@@ -82,8 +82,13 @@ async function loadNameDetails() {
         spinner.innerHTML = "<h2>کوئی ریکارڈ نہیں ملا</h2>";
       }
     } catch (error) {
-      console.error("Error loading document:", error);
-      spinner.innerHTML = "<h3>🚫Something went wrong🚫</h3>";
+      setTimeout(() => {
+        console.error("Error loading document:", error);
+        spinner.style.display = "none";
+        const errorMessage = document.getElementById('errorMessage')
+        errorMessage.style.display = "block";
+        errorMessage.innerHTML = "<h3>🚫Something went wrong🚫</h3>"
+      }, 5000);
     }
   } else {
     document.body.innerHTML = "<h2>URL میں کوئی ID موجود نہیں</h2>";
@@ -98,7 +103,7 @@ function row(label, value) {
 }
 function list(items) {
   if (!Array.isArray(items)) return "<ul><li>—</li></ul>";
-  return `<ul>${items.map((i) => `<li>※ ${i}</li>`).join("")}</ul>`;
+  return `<ul>${items.map((i) => `<li> ${i}</li>`).join("")}</ul>`;
 }
 
 function column(lang) {
@@ -138,7 +143,7 @@ function column(lang) {
     }">
       <div class="name">
         <h2>${name}</h2>
-        <span class="badge">Quranic</span>
+        <span class="badge">Islam4Everyone.com</span>
       </div>
       <div class="meta">
         <span class="chip">${lang === "en" ? "Language: English" : "زبان: اردو"
@@ -208,9 +213,9 @@ btnPdf.addEventListener("click", () => {
 
   function addElementToPDF(element, isFirstPage) {
     const clone = element.cloneNode(true);
-    clone.style.width = "900px";
-    clone.style.maxWidth = "900px";
-    clone.style.margin = "0 auto";
+    clone.style.width = "950px";
+    clone.style.maxWidth = "1000px";
+    clone.style.margin = "0";
     document.body.appendChild(clone);
 
     return html2canvas(clone, {
