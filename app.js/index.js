@@ -24,23 +24,13 @@ const db = getFirestore(app);
 
 const resultsContainer = document.getElementById("resultsContainer");
 const alphabetContainer = document.getElementById("alphabetContainer");
-const resultUpperContainer = document.getElementById("resultUpperContainer");
+
 
 // ✅ 2. FETCH NAMES FOR MAIN SECTION (cards)
 async function fetchNames() {
   try {
     const card = document.getElementById("namesSection");
-    // const loader = document.getElementsById("loading-spinner");
     const resultsSection = document.getElementById("resultsContainer"); 
-    const resultUpper = document.getElementById("resultUpperContainer");
-
-    if (!card || !loader || !resultsSection || !resultUpper) {
-      console.error("Required elements not found");
-      return;
-    }
-
-    resultsSection.style.display = "none";
-    alphabetContainer.style.display = "none";
 
     // Fetch data
     const names = await getDocs(collection(db, "names"));
