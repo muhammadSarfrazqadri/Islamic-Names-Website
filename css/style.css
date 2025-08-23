@@ -224,6 +224,11 @@ h2 {
   .main-front-page {
     height: 70vh;
   }
+
+  #resultsList {
+  width: 90%;
+  }
+
 }
 
 /* =================================== MAIN FRONT PAGE RESPONSIVE STYLES COMPLETED ============================= */
@@ -403,6 +408,7 @@ h2 {
   padding: 2rem 10px;
   border-radius: var(--card-radius);
   text-align: center;
+  align-content: center;
   box-shadow: 1px 1px 8px var(--white);
   transition: all 0.3s;
   cursor: pointer;
@@ -411,6 +417,7 @@ h2 {
 
 .ur_content {
   font-family: 'Jameel Noori Nastaleeq', sans-serif;
+  text-align: center;
 }
 
 

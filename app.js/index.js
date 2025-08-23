@@ -22,25 +22,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const resultsContainer = document.getElementById("resultsContainer");
-const alphabetContainer = document.getElementById("alphabetContainer");
+
+
 
 
 // ✅ 2. FETCH NAMES FOR MAIN SECTION (cards)
 async function fetchNames() {
   try {
     const card = document.getElementById("namesSection");
-    const resultsSection = document.getElementById("resultsContainer"); 
-
-    // Fetch data
+    
     const names = await getDocs(collection(db, "names"));
-
-    // End: hide loader, show results, set large height
-    // loader.style.display = "none";
-    document.getElementsByClassName("loader")[0].style.display = "none";
-    resultsSection.style.display = "block";
-    alphabetContainer.style.display = "block";
-
+    
+    
     // Render cards
     names.forEach((name) => {
       const { name_en, name_ur, meaning_en, meaning_ur } = name.data();
@@ -55,8 +48,8 @@ async function fetchNames() {
               <h2 class="name">${name_ur}</h2>
               <p class="meaning">${meaning_ur}</p>
             </span>
-          </div>
-          <a class="details-btn" id="${name.id}" href="htmls/nameDetails.html?id=${name.id}">More Details</a>
+            </div>
+            <a class="details-btn" id="${name.id}" href="htmls/nameDetails.html?id=${name.id}">More Details</a>
         </div>`;
     });
   } catch (error) {
@@ -100,7 +93,7 @@ if (resultsList && searchInput) {
       const filtered = namesArray.filter((item) =>
         item.name_en.includes(searchValue) || item.name_ur.includes(searchValue)
       );
-
+      
       filtered.forEach((item) => {
         const li = document.createElement("li");
         const a = document.createElement("a");
@@ -109,10 +102,10 @@ if (resultsList && searchInput) {
         a.href = `htmls/nameDetails.html?id=${item.id}`;
         li.appendChild(a);
         resultsList.appendChild(li);
-
+        
         
       });
-
+      
       if (filtered.length === 0) {
         resultsList.innerHTML = "<li>No names found</li>";
       }
@@ -169,17 +162,17 @@ async function fetchAllNames() {
     const names = await getDocs(collection(db, "names"));
     const namesCard = document.getElementById("resultsContainer");
     namesCard.innerHTML = "";
-
+    
     names.forEach((doc) => {
       const data = doc.data();
       namesCard.innerHTML += `
-        <div class="name-card">
-          <h2 class="name">${data.name_en}</h2> |
-          <span class="ur_content" dir="rtl">
+      <div class="name-card">
+      <h2 class="name">${data.name_en}</h2> |
+      <span class="ur_content" dir="rtl">
             <h2 class="name">${data.name_ur}</h2>
-          </span>
-          <a class="details-btn" id="${doc.id}" href="/htmls/nameDetails.html?id=${doc.id}" >More Details</a>
-        </div>`;
+            </span>
+            <a class="details-btn" id="${doc.id}" href="/htmls/nameDetails.html?id=${doc.id}" >More Details</a>
+            </div>`;
     });
   } catch (error) {
     console.error("Error fetching all names:", error);

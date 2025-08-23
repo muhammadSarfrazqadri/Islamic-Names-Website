@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="../css/navBar.css">
   <style>
     .header {
-      background: #0a4f32;
+      background: #2dc0d3;
       color: white;
       padding: 20px;
       text-align: center;
@@ -39,10 +39,9 @@
     }
 
     .search-box input {
-      padding: 8px;
-      border-radius: 5px;
+      padding: 8px 15px;
+      border-radius: 15px;
       border: none;
-      width: 250px;
       max-width: 90%;
     }
 
@@ -51,9 +50,14 @@
     }
 
     .category h2 {
-      border-left: 5px solid #0a4f32;
-      padding-left: 10px;
-      color: #0a4f32;
+      border-left: 7px solid var(--primary);
+      border-right: 1px solid var(--primary);
+      border-bottom: 1px solid var(--primary);
+      border-top: 1px solid var(--primary);
+      border-radius: 0 20px 20px 0;
+      padding: 7px 10px 7px 0;
+      color: var(--primary);
+      background-color: var(--primary-most-light);
     }
 
     .book-grid {
@@ -73,14 +77,12 @@
       transition: transform 0.2s;
     }
 
-    .book-card:hover {
-      transform: translateY(-4px);
+    .book-card:hover  {
+      transform: translateY(-1px);
     }
 
-    .book-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
+    .media-block {
+      text-align: center;
     }
 
     .book-info {
@@ -89,11 +91,13 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
     }
 
     .book-info h3 {
+      text-align: justify;
       font-size: 1rem;
-      margin: 0 0 5px 0;
+      margin: 1px 0 4px 0;
     }
 
     .book-info p {
@@ -105,7 +109,7 @@
     .download-btn {
       display: inline-block;
       text-align: center;
-      background: linear-gradient(180deg, #0b5f3b 0%, #0a4f32 100%);
+      background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
       color: white;
       padding: 8px 12px;
       margin-top: 10px;
@@ -114,6 +118,26 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
+    .Read-online-btn {
+      display: inline-block;
+      text-align: center;
+      background: linear-gradient(180deg, rgb(43, 53, 180)  0%, rgb(101, 111, 247)  100%);
+      color: white;
+      padding: 8px 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .download-btn:hover,
+    .Read-online-btn:hover {
+      box-shadow: 0 0 7px gray;
+      transform: scale(1.01);
+    }
+
 
     figcaption {
       font-size: 0.75rem;
@@ -187,125 +211,203 @@
       <div class="book-grid">
         <article class="book-card">
           <figure class="media-block">
-            <img src="../images/hadaiq-bakhshish-768x512.png" alt="Hadaiq e Bakhshish - Naat Book"
-              loading="lazy" width="800" height="500">
+            <img src="../images/hadaiq-bakhshish-768x512.webp" alt="Hadaiq e Bakhshish - Naat Book"
+              loading="lazy" width="auto" height="250px">
             <figcaption>Hadaiq e Bakhshish - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
             <h3>Hadaiq e Bakhshish |<span class="author"> Ala Hazrat Imam Ahmed Raza Khan</span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://data2.dawateislami.net/bookslibrary/ur/hadaiq-e-bakhshish/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2003/290-1.pdf?fn=hadaiq-e-bakhshish" target="_blank" class="download-btn">Download</a>
-            <a href="https://data2.dawateislami.net/bookslibrary/ur/hadaiq-e-bakhshish/page-1" target="_blank" class="download-btn">Read Online</a>
           </div>
         </article>
       
         <article class="book-card">
           <figure class="media-block">
             <img src="../images/bayaz-paak-768x512.webp" alt="Bayaz e Paak - Naat Book"
-              loading="lazy" width="800" height="500">
+              loading="lazy" width="auto" height="250px">
             <figcaption>Bayaz e Paak - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
-            <h3>Bayaz e Paak</h3>
+            <h3>Bayaz e Paak |<span class="author"> Hujjat Ul Islam Hamid Raza Khan</span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/bayaz-e-paak-hujjat-ul-islam/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2013/723-1.pdf?fn=bayaz-e-paak-hujjat-ul-islam" target="_blank" class="download-btn">Download</a>
-            <a href="https://www.dawateislami.net/bookslibrary/ur/bayaz-e-paak-hujjat-ul-islam/page-1" target="_blank" class="download-btn">Read Online</a>
           </div>
         </article>
 
         <article class="book-card">
           <figure class="media-block">
             <img src="../images/manaqib-attar-768x512.webp" alt="Manaqib-e-Attar - Naat Book"
-              loading="lazy" width="800" height="500">
+              loading="lazy" width="auto" height="250px">
             <figcaption>Manaqib-e-Attar - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
-            <h3>Manaqib-e-Attar</h3>
+            <h3>Manaqib-e-Attar |<span class="author"> Al-Madina tul Ilmiyya</span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/manaqib-e-attar/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2018/1734-1.pdf?fn=manaqib-e-attar" target="_blank" class="download-btn">Download</a>
-            <a href="https://www.dawateislami.net/bookslibrary/ur/manaqib-e-attar/page-1" target="_blank" class="download-btn">Read Online</a>
           </div>
         </article>
 
         <article class="book-card">
           <figure class="media-block">
-            <img src="../images/qabale-bakhshish-768x512.webp" alt="Qabale Bakhshish - Naat Book"
-              loading="lazy" width="800" height="500">
+            <img src="../images/qabale-bakhshish-768x512.jpg" alt="Qabale Bakhshish - Naat Book"
+              loading="lazy" width="auto" height="250px">
             <figcaption>Qabale Bakhshish - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
-            <h3>Qabale Bakhshish</h3>
+            <h3>Qabale Bakhshish |<span class="author"> Khalifay Ala Hazrat Mulana Jameel ur Rahman </span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/qabala-e-bakhshish/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2019/1899-1.pdf?fn=qabala-e-bakhshish" target="_blank" class="download-btn">Download</a>
-            <a href="https://www.dawateislami.net/bookslibrary/ur/qabala-e-bakhshish/page-1" target="_blank" class="download-btn">Read Online</a>
+          </div>
+        </article>
+        
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/wasail-e-firdos.jpg" alt="Wasail e Firdos - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Wasail e Firdos - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Wasail e Firdos |<span class="author"> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/wasail-e-firdos/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2019/1899-1.pdf?fn=wasail-e-firdos" target="_blank" class="download-btn">Download</a>
           </div>
         </article>
 
         <article class="book-card">
           <figure class="media-block">
-            <img src="../images/saman-bakhish.webp" alt="Saman e Bakhish - Naat Book"
-              loading="lazy" width="800" height="500">
+            <img src="../images/saman-bakhish.jpg" alt="Saman e Bakhish - Naat Book"
+              loading="lazy" width="auto" height="250px">
             <figcaption>Saman e Bakhish - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
-            <h3>Saman e Bakhish</h3>
+            <h3>Saman e Bakhish |<span class="author"> Mulana Mustafa Raza Khan </span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/saman-e-bakhsish/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2018/1761-1.pdf?fn=saman-e-bakhsish" target="_blank" class="download-btn">Download</a>
-            <a href="https://www.dawateislami.net/bookslibrary/ur/saman-e-bakhsish/page-1" target="_blank" class="download-btn">Read Online</a>
           </div>
         </article>
 
         <article class="book-card">
           <figure class="media-block">
-            <img src="../images/wasail-bakhshish-768x512.webp" alt="Wasail e Bakhshish - Naat Book"
-              loading="lazy" width="800" height="500">
+            <img src="../images/wasail-bakhshish-768x512.jpg" alt="Wasail e Bakhshish - Naat Book"
+              loading="lazy" width="auto" height="250px">
             <figcaption>Wasail e Bakhshish - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
-            <h3>Wasail e Bakhshish</h3>
+            <h3>Wasail e Bakhshish |<span> Ameer E Ahle Sunnat </span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/wasail-e-bakhshish/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2010/519-1.pdf?fn=wasail-e-bakhshish" target="_blank" class="download-btn">Download</a>
-            <a href="https://www.dawateislami.net/bookslibrary/ur/wasail-e-bakhshish/page-1" target="_blank" class="download-btn">Read Online</a>
           </div>
         </article>
 
         <article class="book-card">
           <figure class="media-block">
-            <img src="../images/zoqe-naat-768x512.webp" alt="Zoqe Naat - Naat Book"
-              loading="lazy" width="800" height="500">
+            <img src="../images/zoqe-naat-768x512.jpg" alt="Zoqe Naat - Naat Book"
+              loading="lazy" width="auto" height="250px">
             <figcaption>Zoqe Naat - Naat Book</figcaption>
           </figure>
 
           <div class="book-info">
-            <h3>Zoqe Naat</h3>
+            <h3>Zoqe Naat |<span> Mulana Hassan Raza Khan </span></h3>
             <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/zoq-e-naat/page-1" target="_blank" class="Read-online-btn">Read Online</a>
             <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2018/1734-1.pdf?fn=zoq-e-naat" target="_blank" class="download-btn">Download</a>
-            <a href="https://www.dawateislami.net/bookslibrary/ur/zoq-e-naat/page-1" target="_blank" class="download-btn">Read Online</a>
           </div>
         </article>
 
 
       </div>
       <!-- <a href="naats.html" class="see-all">See All</a> -->
-    </section>
-
     <section class="category">
       <h2>Islamic Names Books</h2>
       <div class="book-grid">
+
         <article class="book-card">
-          <figure>
-            <img src="names1.jpg" alt="Islamic Names Book" loading="lazy">
+          <figure class="media-block">
+            <img src="../images/name-rakhnay-kay-ahkam.jpg" alt="Name Rakhnay Kay Ahkam - Names Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Name Rakhnay Kay Ahkam - Names Book</figcaption>
           </figure>
+
           <div class="book-info">
-            <h3>Beautiful Islamic Names</h3>
-            <p>List of Islamic boy and girl names with meanings.</p>
-            <a href="https://example.com/names.pdf" target="_blank" class="download-btn">Download</a>
+            <h3>Name Rakhnay Kay Ahkam |<span> Al-Madina tul Ilmiyya </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/name-rakhnay-kay-ahkam/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2014/801-1.pdf?fn=naam-rakhnay-kay-ahkam" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/naam-kesay-rakhay-jaen.webp" alt="Naam Kesay Rakhay Jaen - Names Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Naam Kesay Rakhay Jaen - Names Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Naam Kesay Rakhay Jaen |<span> Al-Madina tul Ilmiyya </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/naam-kesay-rakhay-jaen/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2016/1498-1.pdf?fn=naam-kesay-rakhay-jaen" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/name-rakhne-ki-18-sunnatain-aur-adaab.webp" alt="Name Rakhne Ki 18 Sunnatain Aur Adaab - Names Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Name Rakhne Ki 18 Sunnatain Aur Adaab - Names Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Name Rakhne Ki 18 Sunnatain Aur Adaab |<span class="auther"> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/name-rakhne-ki-18-sunnatain-aur-adaab/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2018/1734-1.pdf?fn=name-rakhne-ki-18-sunnatain-aur-adaab" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/unique-name-rakhna-kaisa.jpg" alt="Unique Name Rakhna Kaisa - Names Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Unique Name Rakhna Kaisa - Names Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Unique Name Rakhna Kaisa |<span> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/unique-name-rakhna-kaisa/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2019/1894-1.pdf?fn=unique-naam-rakhna-kaisa" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/nam-e-muhammad-ki-barkatain.jpg" alt="Nam-e-Muhammad Ki Barkatain - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Nam-e-Muhammad Ki Barkatain - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Nam - E - Muhammad Ki Barkatain |<span> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/nam-e-muhammad-ki-barkatain/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2020/1987-1.pdf?fn=nam-e-muhammad-ki-barkatain" target="_blank" class="download-btn">Download</a>
           </div>
         </article>
       </div>
@@ -315,14 +417,94 @@
     <section class="category">
       <h2>Hadees & Sunnah Books</h2>
       <div class="book-grid">
+
         <article class="book-card">
-          <figure>
-            <img src="hadees1.jpg" alt="Riyad-us-Saliheen Book" loading="lazy">
+          <figure class="media-block" style= "text-align: center;">
+            <img src="../images/tafseer-e-noor-ul-irfan-99-madani-phool-qist-3.jpg" alt="Tafseer e Noor Ul Irfan 99 Madani Phool (Qist 3) - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Tafseer e Noor Ul Irfan 99 Madani Phool (Qist 3) - Naat Book</figcaption>
           </figure>
+
           <div class="book-info">
-            <h3>Riyad-us-Saliheen</h3>
-            <p>Authentic Hadees collection with explanations.</p>
-            <a href="https://example.com/hadees.pdf" target="_blank" class="download-btn">Download</a>
+            <h3>Tafseer e Noor Ul Irfan 99 Madani Phool (Qist 3) |<span> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/tafseer-e-noor-ul-irfan-99-madani-phool-qist-3/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2025/3535-1.pdf?fn=tafseer-e-noor-ul-irfan-99-madani-phool-qist-3" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/achay-bachon-ki-khususiyaat.jpg" alt="Achay Bachon Ki Khususiyaat - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Achay Bachon Ki Khususiyaat - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Achay Bachon Ki Khususiyaat |<span> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/achay-bachon-ki-khususiyaat/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2021/2770-1.pdf?fn=achay-bachon-ki-khususiyaat" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/bachon-ki-ikhlaqi-tarbiyat.jpg" alt="Bachon Ki Ikhlaqi Tarbiyat - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Bachon Ki Ikhlaqi Tarbiyat - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Bachon Ki Ikhlaqi Tarbiyat |<span> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/bachon-ki-ikhlaqi-tarbiyat/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2024/3391-1.pdf?fn=bachon-ki-ikhlaqi-tarbiyat" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/quran-sikhiye-hissa-1.jpg" alt="Quran Sikhiye Hissa 1 - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Quran Sikhiye Hissa 1 - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Quran Sikhiye Hissa 1 |<span> Al-Madina Tul Ilmiyya </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="blank.html" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2022/2932-1.pdf?fn=quran-sikhiye-hissa-1" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/60-dars-e-quran.jpg" alt="60 Dars e Quran - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>60 Dars e Quran - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>60 dars e quran  |<span> Mulana Mufti Muhammad Qasim Attari </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="blank.html" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2023/3139-1.pdf?fn=60-dars-e-quran" target="_blank" class="download-btn">Download</a>
+          </div>
+        </article>
+
+        <article class="book-card">
+          <figure class="media-block">
+            <img src="../images/jannat-main-lay-janay-walay-aamal.jpg" alt="Jannat Main Lay Janay Walay Aamal - Naat Book"
+              loading="lazy" width="auto" height="250px">
+            <figcaption>Jannat Main Lay Janay Walay Aamal - Naat Book</figcaption>
+          </figure>
+
+          <div class="book-info">
+            <h3>Jannat Main Lay Janay Walay Aamal |<span> Ameer E Ahle Sunnat </span></h3>
+            <p>A beautiful collection of Naats in Urdu.</p>
+            <a href="https://www.dawateislami.net/bookslibrary/ur/jannat-main-lay-janay-walay-aamal/page-1" target="_blank" class="Read-online-btn">Read Online</a>
+            <a href="https://data2.dawateislami.net/Data/Books/Download/ur/pdf/2006/154-1.pdf?fn=jannat-main-lay-janay-walay-aamal" target="_blank" class="download-btn">Download</a>
           </div>
         </article>
       </div>
